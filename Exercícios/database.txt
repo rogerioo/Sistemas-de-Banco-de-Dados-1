@@ -1,0 +1,35 @@
+3
+
+roger 123 456 789
+21 9 1999
+glenda aurea
+3
+uno fiat branco pv flex
+135 246
+jgh765 2019
+argo fiat vermelho pv flex
+690 257
+jui987 2019
+voyage vw prata pv flex
+739 168
+fgh654 2019
+
+glenda 567 123 450
+30 12 1961
+aurea eber
+2
+up vw azul pv flex
+456 890
+jkg1961 2019
+fox vw preto pv flex
+123 456
+jig987 2019
+
+Aurea 890 453 147
+3 4 1930
+Leandra Aurelio
+1
+Chevette vw prata pv flex
+147 125
+jgh576 1990
+
