@@ -1,11 +1,11 @@
--- --------     << Detran >>     ------------
+-- --------------------     << Detran >>     -----------------------
 --
 --                    SCRIPT DE CRIACAO (DDL)
 --
 -- Data Criacao ...........: 30/09/2019
 -- Autor(es) ..............: Rogério S. dos Santos Júnior
 -- Banco de Dados .........: MySQL
--- Banco de Dados(nome) ...: bdDetran
+-- Banco de Dados(nome) ...: aula4exer6
 --
 -- Data Ultima Alteracao ..: 23/09/2019
 --   => Criação do script de apagar
@@ -13,7 +13,9 @@
 -- PROJETO => 01 Base de Dados
 --         => 09 Tabelas
 -- -----------------------------------------------------------------
-use bdDetran;
+
+use aula4exer6;
+
 DROP TABLE INFRACAO;
 DROP TABLE VEICULO;
 DROP TABLE telefone;

@@ -1,11 +1,11 @@
--- --------     << Detran >>     ------------
+-- --------------------     << Detran >>     -----------------------
 --
---                    SCRIPT DE CRIACAO (DDL)
+--                    SCRIPT DE CRIACAO (DML)
 --
 -- Data Criacao ...........: 30/09/2019
 -- Autor(es) ..............: Rogério S. dos Santos Júnior
 -- Banco de Dados .........: MySQL
--- Banco de Dados(nome) ...: bdDetran
+-- Banco de Dados(nome) ...: aula4exer6
 --
 -- Data Ultima Alteracao ..: 23/09/2019
 --   => Criação do mockup de dados
@@ -13,7 +13,7 @@
 -- PROJETO => 01 Base de Dados
 --         => 09 Tabelas
 -- -----------------------------------------------------------------
-USE bdDetran;
+USE aula4exer6;
 
 -- --------
 -- POPULA 1

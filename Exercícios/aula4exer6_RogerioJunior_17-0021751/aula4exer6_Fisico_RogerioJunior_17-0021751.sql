@@ -5,7 +5,7 @@
 -- Data Criacao ...........: 30/09/2019
 -- Autor(es) ..............: Rogério S. dos Santos Júnior
 -- Banco de Dados .........: MySQL
--- Banco de Dados(nome) ...: bdDetran
+-- Banco de Dados(nome) ...: aula4exer6
 --
 -- Data Ultima Alteracao ..: 23/09/2019
 --   => Criação do modelo físico do banco
@@ -13,8 +13,8 @@
 -- PROJETO => 01 Base de Dados
 --         => 09 Tabelas
 -- -----------------------------------------------------------------
-CREATE DATABASE bdDetran;
-USE bdDetran;
+CREATE DATABASE IF NOT EXISTS aula4exer6;
+USE aula4exer6;
 
 CREATE TABLE PROPRIETARIO (
   cpf BIGINT(11) NOT NULL PRIMARY KEY,
