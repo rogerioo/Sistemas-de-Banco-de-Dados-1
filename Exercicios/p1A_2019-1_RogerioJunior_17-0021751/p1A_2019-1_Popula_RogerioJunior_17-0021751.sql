@@ -9,7 +9,7 @@
 USE p1A;
 
 INSERT INTO
-  ALUNO (cpfAluno, dtNascimento, nome)
+  PESSOA (cpf, dtNascimento, nome)
 VALUES
   (
     12345678912,
@@ -25,18 +25,7 @@ VALUES
     12345678967,
     '1998-11-20',
     'Youssef Muhamad'
-  );
-
-INSERT INTO
-  telefone (cpfAluno, telefone)
-VALUES
-  (12345678912, 982034567),
-  (12345678934, 982034568),
-  (12345678967, 982034569);
-
-INSERT INTO
-  DOCENTE (cpfDocente, dtNascimento,nome)
-VALUES
+  ),
   (
     12345678909,
     '1930-04-03',
@@ -52,6 +41,27 @@ VALUES
     '1970-09-03',
     'Edson Alves'
   );
+
+INSERT INTO
+  ALUNO (cpfAluno)
+VALUES
+  (12345678912),
+  (12345678934),
+  (12345678967);
+
+INSERT INTO
+  telefone (cpf, telefone)
+VALUES
+  (12345678912, 982034567),
+  (12345678934, 982034568),
+  (12345678967, 982034569);
+
+INSERT INTO
+  DOCENTE (cpfDocente)
+VALUES
+  (12345678909),
+  (12345678987),
+  (12345678965);
 
 INSERT INTO
   UNIVERSIDADE (area, cep, cgc, cidade, estado, nome)
@@ -101,7 +111,7 @@ INSERT INTO
   ADMITIDO (
     cgc,
     cpfAluno,
-    cpfDocente,
+    matriculaProfessor,
     dtIngresso,
     idCurso
   )
@@ -109,21 +119,21 @@ VALUES
   (
     12345678909812,
     12345678912,
-    12345678909,
+    1,
     '2017-03-01',
     1
   ),
   (
     12345678909856,
     12345678934,
-    12345678965,
+    2,
     '2015-03-05',
     3
   ),
   (
     12345678909834,
     12345678967,
-    12345678987,
+    3,
     '2019-03-13',
     1
   );
