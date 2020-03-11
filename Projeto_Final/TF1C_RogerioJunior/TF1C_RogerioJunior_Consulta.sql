@@ -1,17 +1,16 @@
--- ---------------------   << Trabalho Final - Video Games (Tema 1)  >>   ---------------------
+-- -----------------------------   << Trabalho Final - Video Games (Tema 1) - Grupo C  >>   -----------------------------
 --
---                                   SCRIPT DE CONSULTA (DDL e DML)                                   
+--                                           SCRIPT DE CONSULTAR (DDL E DML)                                            
 -- 
 -- Data Criacao ...........: 04/12/2019
 -- Autor(es) ..............: Rogério S. dos Santos Júnior, Iolane C. Alves de Andrade, Indiara Duarte e Lucas Gomes
 -- Banco de Dados .........: MySQL
 -- Banco de Dados(nome) ...: TF1C_Rogerio
--- 
--- 
+--
 -- PROJETO => 01 Base de Dados
 --         => 25 Tabelas
 -- 
--- --------------------------------------------------------------------------------------------
+-- ----------------------------------------------------------------------------------------------------------------------
 
 USE TF1C_Rogerio;
 

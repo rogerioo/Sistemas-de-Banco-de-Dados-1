@@ -3,22 +3,20 @@
 --                                   SCRIPT DE CRIAÇÃO (DDL)                                   
 -- 
 -- Data Criacao ...........: 04/12/2019
--- Autor(es) ..............: Rogério S. dos Santos Júnior, Iolane C. Alves de Andrade, Indiara Duarte e Lucas Gomes
+-- Autor(es) ..............: Rogério S. dos Santos Júnior e Iolane C. Alves de Andrade
 -- Banco de Dados .........: MySQL
--- Banco de Dados(nome) ...: TF1C_Rogerio
+-- Banco de Dados(nome) ...: TF1_Rogerio
 -- 
--- Data Ultima Alteracao ..: 05/12/2019
---  => Criação de tabelas PAGAMENTO e inclui
 -- 
 -- PROJETO => 01 Base de Dados
---         => 25 Tabelas
+--         => 23 Tabelas
 -- 
 -- --------------------------------------------------------------------------------------------
 
-CREATE DATABASE IF NOT EXISTS TF1C_Rogerio
+CREATE DATABASE IF NOT EXISTS TF1_Rogerio
     DEFAULT CHARACTER SET utf8
     DEFAULT COLLATE utf8_general_ci;
-USE TF1C_Rogerio;
+USE TF1_Rogerio;
 
 CREATE TABLE PESSOA (
     cpf BIGINT(11) NOT NULL,
@@ -217,26 +215,6 @@ CREATE TABLE MANUTENCAO (
     CONSTRAINT MANUTENCAO_VENDA_FK FOREIGN KEY (idVenda)
         REFERENCES VENDA (idVenda)
 ) ENGINE = InnoDB AUTO_INCREMENT = 1;
-
-CREATE TABLE PAGAMENTO (
-    idPagamento INT(2) NOT NULL AUTO_INCREMENT,
-    forma VARCHAR(30) NOT NULL,
-
-    CONSTRAINT PAGAMENTO_PK PRIMARY KEY (idPagamento)
-
-) ENGINE = InnoDB AUTO_INCREMENT = 1;
-
-CREATE TABLE inclui (
-    idVenda INT(11) NOT NULL,
-    idPagamento INT(2) NOT NULL,
-
-    CONSTRAINT inclui_VENDA_FK FOREIGN KEY (idVenda)
-        REFERENCES VENDA(idVenda),
-    CONSTRAINT inclui_PAGAMENTO_FK FOREIGN KEY (idPagamento)
-        REFERENCES PAGAMENTO(idPagamento)
-
-) ENGINE = InnoDB;
-
 
 CREATE TABLE revendido (
     idItem INT(11) NOT NULL,

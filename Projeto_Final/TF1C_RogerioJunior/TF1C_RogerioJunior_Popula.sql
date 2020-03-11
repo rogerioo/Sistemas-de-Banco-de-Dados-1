@@ -1,21 +1,24 @@
--- ---------------------   << Trabalho Final - Video Games (Tema 1)  >>   ---------------------
+-- -----------------------------   << Trabalho Final - Video Games (Tema 1) - Grupo C  >>   -----------------------------
 --
---                                   SCRIPT DE POPULA (DML)                                   
+--                                            SCRIPT DE POPULA (DML)                                            
 -- 
 -- Data Criacao ...........: 04/12/2019
 -- Autor(es) ..............: Rogério S. dos Santos Júnior, Iolane C. Alves de Andrade, Indiara Duarte e Lucas Gomes
 -- Banco de Dados .........: MySQL
 -- Banco de Dados(nome) ...: TF1C_Rogerio
 --
--- Data Ultima Alteracao ..: 05/12/2019
+-- Data Ultima Alteracao ..: 08/12/2019
 --  => Inclusão de tuplas nas novas tabelas PAGAMENTO e inclui
---
+--  => Adição do campo percentualPago nas tuplas de inclui
+--  => Troca do campo hora para dtHora das tuplas de VENDA
+-- 
 -- PROJETO => 01 Base de Dados
 --         => 25 Tabelas
 -- 
--- --------------------------------------------------------------------------------------------
+-- ----------------------------------------------------------------------------------------------------------------------
 
 USE TF1C_Rogerio;
+
 
 INSERT INTO PESSOA
     (cpf, nomeCompleto)
@@ -129,13 +132,13 @@ VALUES
     ('Lente Tela De Concha De Habitação Claro Completa Para Capa Para Nintend Ds Lite Dsl', 33.00);
 
 INSERT INTO VENDA
-    (data, formaPagamento, desconto, cpfCliente, matFuncionario)
+    (dtHora, desconto, cpfCliente, matFuncionario)
 VALUES
-    ('2019-11-27 16:15:30', 'D', 0, 78766228018, 1),
-    ('2019-11-27 16:20:56', 'CD', 0, 78766228018, 1),
-    ('2019-11-27 16:40:23', 'D', 0, 12566432031, 2),
-    ('2019-11-27 16:50:45', 'CCV', 0, 12566432031, 2),
-    ('2019-11-27 17:10:26', 'CCP', 0, 18571990069, 1);
+    ('2019-11-27 16:15:30', 0, 78766228018, 1),
+    ('2019-11-27 16:20:56', 0, 78766228018, 1),
+    ('2019-11-27 16:40:23', 0, 12566432031, 2),
+    ('2019-11-27 16:50:45', 0, 12566432031, 2),
+    ('2019-11-27 17:10:26', 0, 18571990069, 1);
 
 INSERT INTO ITEM
     (ncm, armazenamento, localizacao, descricao, dtEntrada, idMarca, matFuncionario, idModelo)
@@ -174,10 +177,10 @@ INSERT INTO MANUTENCAO
         responsavel, dtSaida, tecnico, idVenda)
 VALUES
     ('2316771', 'Controle PlaySation 2', 'SIA', 'S', 'O', '2019-11-27', 78766228018, 1, '2019-12-04', 2, 1),
-    ('4318651', 'Console PlaySation 2', 'SIA', 'S', 'A', '2019-11-27', 78766228018, 1, '2019-12-04', 2, 2),
-    ('5571771', 'Controle PlaySation 4', 'SIA', 'S', 'E', '2019-11-27', 12566432031, 2, '2019-12-04', 4, 3),
-    ('6916678', 'Console PlaySation 4', 'SIA', 'S', 'E', '2019-11-27', 12566432031, 2, '2019-12-04', 4, 4),
-    ('9846771', 'Console Nintendo', 'SIA', 'S', 'P', '2019-11-27', 18571990069, 3, '2019-12-04', 5, 5);
+    ('4318651', 'Console PlaySation 2', 'SIA', 'S', 'A', '2019-11-27', 78766228018, 1, '2019-12-04', 2, 3),
+    ('5571771', 'Controle PlaySation 4', 'SIA', 'S', 'E', '2019-11-27', 12566432031, 2, '2019-12-04', 2, 3),
+    ('6916678', 'Console PlaySation 4', 'SIA', 'S', 'E', '2019-11-27', 12566432031, 2, '2019-12-04', 2, 4),
+    ('9846771', 'Console Nintendo', 'SIA', 'S', 'P', '2019-11-27', 18571990069, 3, '2019-12-04', 2, 5);
 
 
 INSERT INTO PAGAMENTO 
@@ -191,13 +194,13 @@ VALUES
     ('Cheque');
 
 INSERT INTO inclui
-    (idVenda, idPagamento)
+    (idVenda, idPagamento, percentualPago)
 VALUES
-    (1, 1),
-    (2, 2),
-    (3, 4),
-    (4, 3),
-    (5, 1);
+    (1, 1, 70.73),
+    (1, 2, 30.27),
+    (3, 4, 33.33),
+    (3, 3, 33.33),
+    (3, 1, 33.33);
 
 INSERT INTO corrige
     (idDefeito, idPeca)
@@ -212,17 +215,17 @@ INSERT INTO fornece
     (idItem, idFornecedor)
 VALUES
     (1, 1),
-    (2, 2),
-    (3, 4),
-    (4, 4),
-    (5, 5);
+    (2, 1),
+    (3, 2),
+    (4, 2),
+    (5, 3);
 
 INSERT INTO inserido
     (idArea, matFuncionario)
 VALUES
     (1, 1),
     (2, 2),
-    (3, 4),
+    (3, 3),
     (4, 4),
     (5, 5);
 
@@ -231,9 +234,9 @@ INSERT INTO prove
 VALUES
     (1, 1),
     (2, 2),
-    (3, 4),
-    (4, 4),
-    (5, 5);
+    (1, 4),
+    (2, 4),
+    (2, 5);
 
 INSERT INTO repara
     (idManutencao, idDefeito)

@@ -3,19 +3,17 @@
 --                                   SCRIPT DE APAGA (DDL)                                   
 -- 
 -- Data Criacao ...........: 04/12/2019
--- Autor(es) ..............: Rogério S. dos Santos Júnior, Iolane C. Alves de Andrade, Indiara Duarte e Lucas Gomes
+-- Autor(es) ..............: Rogério S. dos Santos Júnior e Iolane C. Alves de Andrade
 -- Banco de Dados .........: MySQL
--- Banco de Dados(nome) ...: TF1C_Rogerio
+-- Banco de Dados(nome) ...: TF1_Rogerio
 -- 
--- Data Ultima Alteracao ..: 05/12/2019
---  => Adição do comando de apagar as tabelas PAGAMENTO e inclui
---
+-- 
 -- PROJETO => 01 Base de Dados
---         => 25 Tabelas
+--         => 23 Tabelas
 -- 
 -- --------------------------------------------------------------------------------------------
 
-USE TF1C_Rogerio;
+USE TF1_Rogerio;
 
 DROP TABLE corrige;
 DROP TABLE fornece;
@@ -26,8 +24,6 @@ DROP TABLE vendido;
 DROP TABLE revendido;
 DROP TABLE telefoneFornecedor;
 DROP TABLE telefonePessoa;
-DROP TABLE inclui;
-DROP TABLE PAGAMENTO;
 DROP TABLE MANUTENCAO;
 DROP TABLE VENDA;
 DROP TABLE NOVO;
